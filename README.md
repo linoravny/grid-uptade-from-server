@@ -1,7 +1,7 @@
 # grid-uptate-from-server
 
-server - node express inclueds CORS
-client - Angular
+1. server - node express inclueds CORS
+2. client - Angular
 
 ## required install:
 
@@ -11,16 +11,17 @@ client - Angular
 ## get started - only the first time:
 
 1. open terminal at root
-   run:$ npm install
+   - run:$ npm install
 2. open terminal at folder 'server'
-   run: $ npm install
+   - run: $ npm install
 
 ## run client
 
 open terminal at root
-$ npm serve
 
-server: http://localhost:4200/
+- $ npm serve
+
+- server: http://localhost:4200/
 
 ## run server
 
