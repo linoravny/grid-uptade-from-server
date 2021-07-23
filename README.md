@@ -26,7 +26,7 @@ open terminal at root
 
 open terminal at folder 'server'
 
-- $ npm run start;
+- $ npm run start
 - server: http://localhost:3000/
 
 ## Technologies in this project
@@ -69,16 +69,17 @@ for updated data from backend i presented 2 solutions:
 1. socket io - the main solution
 2. polling - solution in remark
 
-- explaination of my main solution - socket io:
+#### explaination of my main solution - socket io:
 
-* while init page: connect to server (streaming)
-* every second the data update:
+- while init page: connect to server (streaming)
+- every second the data update:
   **. on the firt time full array return
   **. on the next update: return smaller array (only the object that update)
-* after 200 updates the connection close. Other stopping conditions can be set
-* can refresh for show again the POC
+- after 200 updates the connection close. Other stopping conditions can be set
+- can refresh for show again the POC
 
-- handle display the last state while server disconnect
-  local storage - save the last data (after each update) use key value pair.
+#### handle display the last state while server disconnect
+
+local storage - save the last data (after each update) use key value pair.
 
 - remark: i can use Service Worker and display page with the browser cache for offline mode.
