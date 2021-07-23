@@ -20,15 +20,14 @@
 open terminal at root
 
 - $ npm serve
-
 - server: http://localhost:4200/
 
 ## run server
 
 open terminal at folder 'server'
-$ npm run start;
 
-server: http://localhost:3000/
+- $ npm run start;
+- server: http://localhost:3000/
 
 ## Technologies in this project
 
@@ -82,4 +81,4 @@ for updated data from backend i presented 2 solutions:
 - handle display the last state while server disconnect
   local storage - save the last data (after each update) use key value pair.
 
-remark: i can use Service Worker and display page with the browser cache for offline mode.
+- remark: i can use Service Worker and display page with the browser cache for offline mode.
