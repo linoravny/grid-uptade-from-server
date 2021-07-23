@@ -1,0 +1,21 @@
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 15px;
+}
+
+mat-grid-list {
+  margin: 20px;
+  .blue {
+    background-color: rgb(132, 210, 255);
+  }
+  .orange {
+    background-color: rgb(253, 212, 135);
+  }
+  .yellow {
+    background-color: rgb(255, 255, 166);
+  }
+  .gray {
+    background-color: rgb(196, 196, 196);
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "RESTful nodeApi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Errpr: no test specofied\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "RESTful",
+    "API"
+  ],
+  "author": "Linor Avny",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "rxjs": "^7.2.0",
+    "socket.io": "^4.1.3"
+  }
+}

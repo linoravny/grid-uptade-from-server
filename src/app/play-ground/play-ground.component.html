@@ -1,0 +1,15 @@
+
+
+<div class="error" *ngIf="error">
+  <p>SERVER ERROR: {{error}}</p>
+  <p>Display grid from previos state, Refresh page for try again</p>
+</div>
+
+
+
+<mat-grid-list cols="9" rowHeight="100px">
+  <mat-grid-tile
+      *ngFor="let box of data"
+      [ngClass]="{ blue:box?.state === 1, orange: box?.state === 2, yellow: box?.state === 3, gray: box?.state === 4 }">
+    {{box?.state}}
+</mat-grid-tile>
