@@ -1,6 +1,6 @@
 # grid-uptate-from-server
 
-1. server - node express inclueds CORS
+1. server - node express
 2. client - Angular
 
 ## required install:
