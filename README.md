@@ -3,26 +3,26 @@
 1. server - node express
 2. client - Angular
 
-## required install:
+## Required installation:
 
     1. Node JS : https://nodejs.org/en/download/ (install npm packege by default)
     2. angular CLI
 
-## get started - only the first time:
+## Getting started - only the first time:
 
 1. open terminal at root
    - run:$ npm install
 2. open terminal at folder 'server'
    - run: $ npm install
 
-## run client
+## Run client
 
 open terminal at root
 
 - $ npm serve
 - server: http://localhost:4200/
 
-## run server
+## Run server
 
 open terminal at folder 'server'
 
@@ -69,7 +69,7 @@ for updated data from backend i presented 2 solutions:
 1. socket io - the main solution
 2. polling - solution in remark
 
-#### explaination of my main solution - socket io:
+#### Explaination of my main solution - socket io:
 
 - while init page: connect to server (streaming)
 - every second the data update:
@@ -78,7 +78,7 @@ for updated data from backend i presented 2 solutions:
 - after 200 updates the connection close. Other stopping conditions can be set
 - can refresh for show again the POC
 
-#### handle display the last state while server disconnect
+#### Handle display the last state while server disconnect
 
 local storage - save the last data (after each update) use key value pair.
 
