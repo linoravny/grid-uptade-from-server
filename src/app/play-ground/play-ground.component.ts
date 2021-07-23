@@ -14,6 +14,7 @@ export class PlayGroundComponent implements OnInit {
   cols: number = 9;
   subscription!: Subscription;
   error: string | undefined;
+  msg: string = 'Hello, the grid box is update from server....';
 
   constructor(private matrixService: MatrixService) { }
 
@@ -36,11 +37,17 @@ export class PlayGroundComponent implements OnInit {
     }, (err) => {
       console.log(`play ground page -> subscription err: ${err}`);
       this.error = err;
+      
       this.data  = this._getStateFromStorage();
+      if(this.data && this.data.length > 0) {
+        this.msg = 'Hello, the data from your last state :)';
+      } else {
+        this.msg = '';
+      }
     }, () => {
+      this.msg = 'Hello, data is up to date :)';
       console.log(`complete`);
     });
-
   }
 
   _setStateToStorage(data:Array<MatrixItem>):void {

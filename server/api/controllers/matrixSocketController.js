@@ -30,7 +30,7 @@ exports.initMatrix = (req,res) => {
 
         observer.next(diffArr);
 
-        if(counter===5000) {
+        if(counter === 200) {
           console.log('clearInterval');
           clearInterval(interval);
           observer.complete();
@@ -44,11 +44,6 @@ exports.initMatrix = (req,res) => {
   return observable;
 }
 
-exports.disconnect = (_subscribe) => {
-  if(_subscribe) {
-    _subscribe.unsubscribe();
-  }
-}
 
 const randomArray = () => {
   //const matrixArr =

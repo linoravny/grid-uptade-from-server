@@ -8,7 +8,7 @@ const http = require('http').createServer(app);
 var port = process.env.PORT || 3000;
 
 /**** S1 - socket.io ****/
-global.io = require('socket.io')(http, {
+io = require('socket.io')(http, {
   cors: {
     origins: ['http://localhost:4200']
   }
@@ -21,12 +21,14 @@ io.on('connection', (socket) => {
   let subscribe$ = matrixSocketCont.initMatrix().subscribe((res) => {
     console.log(`get-data`);
     io.emit('get-data', res);
+  },(err)=>{
+    console.log(`err: ${err}`);
+  }, ()=> {
+    console.log(`complete`);
+    io.emit('complete-all-data');
   });
 
   socket.on('disconnect', () => {
-    //unsbscibe
-    // matrixSocketCont.disconnect(subscribe$);
-    // io.emit('disconnect');
     console.log('socket disconnected');
   });
 

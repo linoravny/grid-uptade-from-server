@@ -32,6 +32,12 @@ export class MatrixService {
           observer.next(data);
         });
 
+        this.socket.on('complete-all-data', () => {
+          console.log('complete-all-data');
+          observer.complete();
+        });
+        
+
         this.socket.on("connect", ()=>{
           console.log('connect');
         });
