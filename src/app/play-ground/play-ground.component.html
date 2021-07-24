@@ -1,15 +1,76 @@
 
 
-<div class="msg">{{msg}}</div>
 
-<div class="error" *ngIf="error">
-  <p>SERVER ERROR: {{error}}</p>
-  <p>Display grid from previos state, Refresh page for try again</p>
+
+<div class="container-fluid">
+
+  <div class="row msg">
+    <div class="col">{{msg}}</div>
+  </div>
+  
+  <div class="row error" *ngIf="error">
+    <div class="col">
+      <p>SERVER ERROR: {{error}}</p>
+      <p>Display grid from previos state, Refresh page for try again</p>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-4 col-md-3 col-lg-2 info-container">
+      <div class="row info">
+        <div class="col">
+          <div class="row">
+            <div class="col-1">
+              <div class="square blue"></div>
+            </div>
+            <div class="col">
+              KWS_KERIDOS
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <div class="square orange"></div>
+            </div>
+            <div class="col">
+              KWS_KERIDOS_YG
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <div class="square yellow"></div>
+            </div>
+            <div class="col">
+              unknown
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <div class="square gray"></div>
+            </div>
+            <div class="col">
+              error
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-8 col-md-9 col-lg-10 no-padding">
+      <mat-grid-list cols="9" rowHeight="50px">
+        <mat-grid-tile
+            *ngFor="let box of data"
+            [ngClass]="{blue:box?.state === 1, orange: box?.state === 2, yellow: box?.state === 3, gray: box?.state === 4 }">
+          <!-- {{box?.state}} -->
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+  </div>
 </div>
 
-<mat-grid-list cols="9" rowHeight="100px">
-  <mat-grid-tile
-      *ngFor="let box of data"
-      [ngClass]="{ blue:box?.state === 1, orange: box?.state === 2, yellow: box?.state === 3, gray: box?.state === 4 }">
-    {{box?.state}}
-</mat-grid-tile>
+
+
+
+

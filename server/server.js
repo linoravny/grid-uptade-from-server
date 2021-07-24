@@ -1,11 +1,13 @@
 
 const matrixSocketCont = require('./api/controllers/matrixSocketController');
+
 const express = require('express');
 var app = express();
 
 
 const http = require('http').createServer(app);
 var port = process.env.PORT || 3000;
+
 
 /**** S1 - socket.io ****/
 io = require('socket.io')(http, {
@@ -19,7 +21,7 @@ io.on('connection', (socket) => {
   console.log('socket connected');
 
   let subscribe$ = matrixSocketCont.initMatrix().subscribe((res) => {
-    console.log(`get-data`);
+    // console.log(`get-data`);
     io.emit('get-data', res);
   },(err)=>{
     console.log(`err: ${err}`);

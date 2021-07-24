@@ -51,8 +51,8 @@ correctness.
 
 1. data is static and always in the same size - (in this example 45 items)
 2. display grid always have 9 columns
-3. data update - every second
-4. after 200 updates: i disconnect server and stop updating
+3. data update - every 0.5 second
+4. after 500 updates: i disconnect server and stop updating
 
 ## Data structure
 

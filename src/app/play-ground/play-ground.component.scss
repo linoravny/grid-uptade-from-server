@@ -1,25 +1,58 @@
 .error {
-  color: red;
+  color: var(--bs-danger);
+
   text-align: center;
-  margin-top: 15px;
+  margin: 15px 0;
 }
 .msg {
-  color: green;
+  color: var(--bs-success);
   text-align: center;
-  margin-top: 15px;
+  margin: 15px 0;
 }
+
+.no-padding {
+  padding: 0;
+}
+
+.blue {
+  background-color: var(--bs-cyan);
+}
+.orange {
+  background-color: var(--bs-orange);
+}
+.yellow {
+  background-color: var(--bs-warning);
+}
+.gray {
+  background-color: var(--bs-gray);
+}
+
+.info-container {
+  background-color: var(--bs-gray-dark);
+  margin-top: 2px;
+  margin-bottom: -2px;
+  @extend .no-padding;
+  .info {
+    margin: 3px;
+    background-color: var(--bs-light);
+    > div {
+      margin: 10px 0;
+      .square {
+        height: 20px;
+        width: 20px;
+        border-radius: 4px;
+        margin: 2px 0;
+      }
+    }
+  }
+}
+
 mat-grid-list {
-  margin: 20px;
-  .blue {
-    background-color: rgb(132, 210, 255);
-  }
-  .orange {
-    background-color: rgb(253, 212, 135);
-  }
-  .yellow {
-    background-color: rgb(255, 255, 166);
-  }
-  .gray {
-    background-color: rgb(196, 196, 196);
+  margin-right: 5px;
+  mat-grid-tile {
+    margin: 3px;
+    border-radius: 4px;
+    border: 1px solid var(--bs-gray-dark);
+    box-sizing: border-box;
   }
 }

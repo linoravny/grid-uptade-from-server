@@ -20,7 +20,7 @@ exports.initMatrix = (req,res) => {
     observer.next(matrixArr);
 
     let counter = 0;
-    let timeout = 1000;
+    let timeout = 500;
     let updateStateObj;
     const intervalCB = () => {
         counter++;
@@ -30,7 +30,7 @@ exports.initMatrix = (req,res) => {
 
         observer.next(diffArr);
 
-        if(counter === 200) {
+        if(counter === 500) {
           console.log('clearInterval');
           clearInterval(interval);
           observer.complete();

@@ -29,7 +29,8 @@ export class PlayGroundComponent implements OnInit {
           this.data = res;
           this._setStateToStorage(this.data);
         } else {
-          for(const item of res) { //update
+          //update
+          for(const item of res) { 
             this.data[item.id] = item;
           }
           this._setStateToStorage(this.data);
