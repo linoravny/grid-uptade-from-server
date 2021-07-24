@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Grid Update From Server App';
+  title = 'Assignment - Grid Update From Server';
 }
