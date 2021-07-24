@@ -19,7 +19,7 @@
 
 open terminal at root
 
-- $ npm serve
+- $ ng serve
 - server: http://localhost:4200/
 
 ## Run server
